@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<table border='5'  cellspacing='2' class="table">
+
+        <tr>
+            <th>TITLE</th><td><a href="/view/{{object.id}}/">{{object.title|lower}}</a></td>
+        </tr>
+        <tr>
+            <th>AMOUNT</th><td>{{object.amount}}</td>
+        </tr>
+        <tr>
+            <th>DATE</th><td>{{object.date}}</td>
+        </tr>
+        <tr>
+            <th>ACCOUNT</th><td>{{object.account}}</td>
+        </tr>
+        <tr>
+            <th>DESCRIPTION</th><td>{{object.description}}</td>
+        </tr>
+        <tr>
+            <th>CATEGORY</th><td>{{object.category|lower}}</td>
+        </tr>
+
+</table>
+<a href="/view/{{object.id}}/delete"> <input type="button" value="delete" class="btn btn-danger"></a>
+<a href="/view/{{object.id}}/edit"> <input type="button" value="edit" class="btn btn-info"></a>
+
+{% endblock %}

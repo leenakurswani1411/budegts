@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block content %}
+{% load static %}
+<h1 align="center">TYPE HERE</h1>
+<!--TITLE: <input type="text" name="title" ></br>-->
+
+<!--AMOUNT: <input type="text" name="Amount "></br>-->
+
+<!--DESCRIPTION: <input type="text" name="Description" ></br>-->
+
+<form method ='POST'>
+    {% csrf_token %}
+    {% include 'tweaky_form.html' with form=form %}
+    SUBMIT: <input type="submit" name="submit">
+    <img src="{% static 'rename.jpg' %}" height="50" >
+</form>
+
+{% endblock %}

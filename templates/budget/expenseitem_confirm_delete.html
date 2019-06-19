@@ -1,0 +1,42 @@
+{% extends 'base.html'%}
+{% block content %}
+<h1 align="center">TYPE HERE</h1>
+<!--TITLE: <input type="text" name="title" ></br>-->
+
+<!--AMOUNT: <input type="text" name="Amount "></br>-->
+
+<!--DESCRIPTION: <input type="text" name="Description" ></br>-->
+<form method='POST'>
+    {% csrf_token %}
+    <table border='5' cellspacing='2' class="table">
+
+        <tr>
+            <th>TITLE</th>
+            <td>{{object.title|lower}}</td>
+        </tr>
+        <tr>
+            <th>AMOUNT</th>
+            <td>{{object.amount}}</td>
+        </tr>
+        <tr>
+            <th>DATE</th>
+            <td>{{object.date}}</td>
+        </tr>
+        <tr>
+            <th>ACCOUNT</th>
+            <td>{{object.account}}</td>
+        </tr>
+        <tr>
+            <th>DESCRIPTION</th>
+            <td>{{object.description}}</td>
+        </tr>
+        <tr>
+            <th>CATEGORY</th>
+            <td>{{object.category}}</td>
+        </tr>
+
+    </table>
+
+    DELETE : <input type="submit" name="delete" class="btn btn-danger">
+</form>
+{% endblock %}
