@@ -1,5 +1,5 @@
-from base import *
+from .base import *
 
 DEBUG=False
 
-ALLOWED_HOSTS = ['budget-leenakurswani.herokuapp.com']
+ALLOWED_HOSTS = ['budget-leenakurswani1411.heroku.com']
