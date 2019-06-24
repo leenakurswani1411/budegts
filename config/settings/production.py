@@ -2,4 +2,4 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','budget-leenakurswani.herokuapp.com']
+ALLOWED_HOSTS = ['budget-exackt.herokuapp.com','budget-leenakurswani.herokuapp.com']
